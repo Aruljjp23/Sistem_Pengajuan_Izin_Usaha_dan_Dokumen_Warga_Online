@@ -122,3 +122,6 @@ ________________________________________________________________________________
 
 ___________________________________________________________________________________________________________________________
 ### **Langkah Instalasi Lokal**
+
+Ikuti langkah-langkah di bawah ini untuk menjalankan proyek PermitOnline - Sistem Pengajuan Izin Usaha & Dokumen Warga Online secara lokal di komputer Anda.
+
