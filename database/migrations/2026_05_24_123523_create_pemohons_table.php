@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nik', 16)->unique();
             $table->string('nama');
+            $table->foreignId('user_id')->nullable()->constrained('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

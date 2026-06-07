@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Pengajuan;
 use App\Models\Dokumen;
+use App\Models\Pemohon;
 use Illuminate\Support\Str;
 use Barryvdh\DomPDF\Facade\Pdf;
 
@@ -90,14 +91,21 @@ class PengajuanController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'pemohon_id' => 'required|integer|exists:pemohons,id', 
-            'jenis_izin_id' => 'required|integer|exists:jenis_izins,id', 
+            'jenis_izin_id' => 'required|integer|exists:jenis_izins,id',
         ]);
+
+        $pemohon = Pemohon::where('user_id', $request->user()->id)->first();
+
+        if (!$pemohon) {
+            return response()->json([
+                'message' => 'Kamu belum mengisi profil identitas Pemohon. Silakan isi dulu profilmu!'
+            ], 403);
+        }
 
         $nomor_registrasi = 'PERMIT-' . date('Ymd') . '-' . strtoupper(Str::random(5));
         
         $pengajuan = Pengajuan::create([
-            'pemohon_id' => $request->pemohon_id,
+            'pemohon_id' => $pemohon->id, 
             'jenis_izin_id' => $request->jenis_izin_id,
             'nomor_registrasi' => $nomor_registrasi,
             'status' => 'Draft'
@@ -148,5 +156,38 @@ class PengajuanController extends Controller
         $pdf = Pdf::loadView('pdf.surat_izin', ['pengajuan' => $pengajuan]);
 
         return $pdf->download('surat-izin-' . $pengajuan->nomor_registrasi . '.pdf');
+    }
+
+    public function submit($id, Request $request)
+    {
+        $pengajuan = Pengajuan::where('id', $id)
+        ->where('pemohon_id', function($query) use ($request) {
+            $query->select('id')->from('pemohons')->where('user_id', $request->user()->id);
+        })->first();
+
+        if (!$pengajuan) {
+            return response()->json(['message' => 'Data pengajuan tidak ditemukan!'], 404);
+        }
+
+        if ($pengajuan->status !== 'Draft') {
+            return response()->json([
+                'message' => 'Pengajuan tidak bisa dikirim karena statusnya sudah ' . $pengajuan->status
+            ], 400);
+        }
+
+        $dokumen = Dokumen::where('pengajuan_id', $id)->first();
+
+        if (!$dokumen) { 
+            return response()->json(['message' => 'Upload dokumen dulu'], 400); 
+        }
+
+        $pengajuan->update([
+            'status' => 'Diproses'
+        ]);
+
+        return response()->json([
+            'message' => 'Pengajuan resmi dikirim dan sedang diproses oleh Admin.',
+            'data' => $pengajuan
+        ], 200);
     }
 }

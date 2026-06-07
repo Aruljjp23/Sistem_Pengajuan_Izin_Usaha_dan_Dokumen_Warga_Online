@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('jenis_izins', function (Blueprint $table) {
             $table->id();
             $table->string('nama_izin');
-            $table->text('deskripsi')->nullable();
+            $table->string('deskripsi');
+            $table->foreignId('user_id')->nullable()->constrained('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -6,5 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class JenisIzin extends Model
 {
-    //
+    protected $fillable = [
+        'user_id', 
+        'nama_izin',
+        'deskripsi',
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

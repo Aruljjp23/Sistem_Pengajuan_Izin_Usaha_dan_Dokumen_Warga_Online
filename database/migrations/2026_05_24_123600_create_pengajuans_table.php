@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreignId('jenis_izin_id')->constrained('jenis_izins')->onDelete('cascade');
             
             $table->string('nomor_registrasi')->unique();
-            $table->string('status')->default('Draft');
+            $table->enum('status', ['Draft', 'Diproses','Disetujui','Ditolak']);
             $table->timestamps();
         });
     }
