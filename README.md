@@ -18,3 +18,5 @@ ________________________________________________________________________________
 | **Auth** | POST  | /api/register | Mendaftarkan user baru |
 |      | POST  | /api/login    | Login admin/pemohon untuk mendapatkan token |
 |      | POST  | /api/logout   | Logout dan menghapus token |
+| **Pemohon** | /api/pemohon | Menambahkan pemohon |
+| **Jenis Izin** | /api/jenis_izin | Menambahkan jenis izin |
