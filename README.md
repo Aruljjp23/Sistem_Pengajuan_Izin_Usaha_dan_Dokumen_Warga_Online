@@ -21,3 +21,14 @@ ________________________________________________________________________________
 | **Pemohon** | POST | /api/pemohon | Menambahkan pemohon |
 | **Jenis Izin** | POST | /api/jenis_izin | Menambahkan jenis izin |
 | **Pengajuan** | POST | /api/pengajuan | Menambahkan pengajuan |
+|      | POST | /api/pengajuan/1/upload-dokumen | Menambahkan dokumen pengajuan |
+|      | GET  | /api/pengajuan/1 | Menampilkan data pengajuan berdasarkan id |
+|      | PUT  | /api/pengajuan/1/status | Update data pengajuan (hanya admin) |
+|      | DELETE | /api/pengajuan/1 | Hapus data pengajuan (hanya admin) |
+|      | GET | /api/pengajuan | Menampilkan semua data pengajuan (hanya admin) |
+|      | GET | /api/pengajuan?status=Draft | Menampilkan data pengajuan berdasarkan status |
+|      | GET | /api/pengajuan?search=AZWLD | Melakukan pencarian berdasarkan nomer registrasi |
+|      | GET | /api/pengajuan/1/cetak-pdf  | Melakukan cetak pdf surat izin pengajuan |
+|      | PUT | /api/pengajuan/1/submit | Update status pengajuan |
+| **Tracking** | GET | /api/tracking/PERMIT-20260607-AZWLD | Melacak pengajuan berdasarkan nomer registrasi |
+
