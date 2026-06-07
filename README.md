@@ -14,5 +14,5 @@ Berdasarkan Foreign Key (FK) yang dirancang pada database, berikut adalah relasi
 ______________________________________________________________________________________________________________________________
 ### **ERD Database & Relasi**
 | Modul | Method | Endpoint (Route) | Deskripsi & Akses |
-| :--- | :---: | :---: | ---: |
+| :--- | :---: | :---: | :---: |
 | Auth | POST  | /api/register | Mendaftarkan user baru |
