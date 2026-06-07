@@ -47,3 +47,43 @@ ________________________________________________________________________________
 - [POST] /api/login (Admin)
 
    <img width="960" height="564" alt="Api Login sebagai Admin" src="https://github.com/user-attachments/assets/dd02ef45-b650-4efe-9439-e6f421786b45" />
+
+### 2. Pemohon
+
+- [POST] /api/pemohon (Menambahkan pemohon)
+
+  <img width="960" height="564" alt="Api Pemohon" src="https://github.com/user-attachments/assets/9047a1c9-ff51-4f06-b6ff-f4dc2b7edd0d" />
+
+### 3. Jenis Izin
+
+- [POST] /api/jenis-izin (Menambahkan jenis izin)
+
+  <img width="960" height="564" alt="Api Jenis Izin" src="https://github.com/user-attachments/assets/af254a21-0216-4d85-a340-f2776a15c80f" />
+
+### 4. Pengajuan
+
+- [POST] /api/pengajuan (Menambahkan pengajuan)
+
+  <img width="960" height="564" alt="Api Pengajuan" src="https://github.com/user-attachments/assets/6a244f3a-ff5e-4f11-84b5-5558ac56b36d" />
+- [POST] /api/pengajuan/1/upload-dokumen (Menambahkan dokumen pengajuan)
+
+  <img width="960" height="564" alt="Api Pengajuan Upload Dokumen" src="https://github.com/user-attachments/assets/2186f3b6-299a-41bf-b5c2-08231c8333a4" />
+- [GET] /api/pengajuan/1 (Menampilkan data pengajuan berdasarkan id)
+
+  <img width="960" height="564" alt="Api Pengajuan Melihat Berdasarkan Id" src="https://github.com/user-attachments/assets/acbc877e-625f-4de7-b36f-5acf571229b5" />
+- [PUT] /api/pengajuan/1/status (Update data pengajuan (hanya Admin))
+
+  <img width="960" height="564" alt="Api Pengajuan Update Status" src="https://github.com/user-attachments/assets/116fa1a2-6256-4de3-bbd1-9347ec0410c8" />
+- [DELETE] /api/pengajuan/1 (Hapus data pengajuan (hanya Admin))
+
+  <img width="960" height="564" alt="Api Menghapus Data Pengajuan Berdasarkan Id" src="https://github.com/user-attachments/assets/f7d4af8f-656c-4859-8a2c-820052328f12" />
+- [GET] /api/pengajuan (Menampilkan semua data pengajuan (hanya Admin))
+
+  <img width="960" height="564" alt="Api Pengajuan Melihat Semua Data Pengajuan" src="https://github.com/user-attachments/assets/161178b9-2ba2-4d90-b4f9-2b30ecfdcff9" />
+- [GET] /api/pengajuan?status=Draft (Menampilkan data pengajuan berdasarkan status)
+
+  <img width="960" height="564" alt="Api Pengajuan Melihat Status Draft" src="https://github.com/user-attachments/assets/b68795f6-1e75-4f28-99ec-f84f3943b622" />
+- [GET] /api/pengajuan?search=AZWLD (Melakukan pencarian berdasarkan nomer registrasi)
+
+  <img width="960" height="564" alt="Api Pengajuan Melakukan Pencarian Berdasarkan Nomer Registrasi" src="https://github.com/user-attachments/assets/cb6bae57-c532-43a2-b413-3fdc82c7600d" />
+- [GET] /api/pengajuan/1/cetak-pdf (Melakukan cetak pdf surat izin pengajuan)
