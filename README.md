@@ -102,4 +102,23 @@ ________________________________________________________________________________
 ___________________________________________________________________________________________________________________________
 ### **Kendala & Solusi**
 
-- a
+- Kendala
+
+  1. Saat proses upload dokumen pengajuan, file tidak tersimpan ke dalam database karena path file yang dikirim dari form tidak sesuai dengan konfigurasi penyimpanan Laravel.
+  2. Data pengajuan tidak berhasil disimpan karena relasi antara tabel pengajuan, pemohon, dan jenis_izin belum sesuai dengan foreign key yang dirancang.
+  3. Status pengajuan tidak berubah setelah admin melakukan proses verifikasi karena nilai enum yang dikirim dari form tidak sesuai dengan nilai yang tersedia pada database.
+  4. Dokumen yang telah diunggah tidak muncul pada halaman detail pengajuan karena relasi antara tabel pengajuan dan dokumen belum dikonfigurasi dengan benar.
+  5. Pengguna yang belum login masih dapat mengakses beberapa halaman sistem secara langsung melalui URL.
+  6. Nomor registrasi pengajuan berpotensi sama ketika banyak pengajuan dibuat dalam waktu yang berdekatan.
+ 
+- Solusi
+
+  1. Memperbaiki konfigurasi storage dan memastikan proses upload menggunakan validasi serta penyimpanan file melalui fungsi store() sehingga file dapat tersimpan dan ditampilkan kembali dengan benar.
+  2. Melakukan penyesuaian struktur database dan model Eloquent agar relasi foreign key dapat berjalan dengan baik sehingga data pengajuan dapat tersimpan secara konsisten.
+  3. Menyesuaikan nilai status pada form dan controller dengan enum yang tersedia yaitu Draft, Diproses, Disetujui, dan Ditolak.
+  4. Menambahkan relasi hasMany() pada model Pengajuan dan belongsTo() pada model Dokumen sehingga data dokumen dapat ditampilkan sesuai pengajuannya.
+  5. Menambahkan middleware autentikasi pada route yang memerlukan hak akses sehingga hanya pengguna yang telah login yang dapat mengakses fitur tersebut.
+  6. Membuat mekanisme generate nomor registrasi yang unik berdasarkan kombinasi tanggal, waktu, dan ID pengajuan sehingga setiap pengajuan memiliki nomor registrasi yang berbeda.
+
+___________________________________________________________________________________________________________________________
+### **Langkah Instalasi Lokal**
