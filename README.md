@@ -20,3 +20,4 @@ ________________________________________________________________________________
 |      | POST  | /api/logout   | Logout dan menghapus token |
 | **Pemohon** | POST | /api/pemohon | Menambahkan pemohon |
 | **Jenis Izin** | POST | /api/jenis_izin | Menambahkan jenis izin |
+| **Pengajuan** | POST | /api/pengajuan | Menambahkan pengajuan |
