@@ -47,6 +47,9 @@ ________________________________________________________________________________
 - [POST] /api/login (Admin)
 
    <img width="960" height="564" alt="Api Login sebagai Admin" src="https://github.com/user-attachments/assets/dd02ef45-b650-4efe-9439-e6f421786b45" />
+- [POST] /api/logout
+
+  <img width="960" height="564" alt="Api Logout" src="https://github.com/user-attachments/assets/12722010-93c1-43a4-bb1c-81e69523c710" />
 
 ### 2. Pemohon
 
