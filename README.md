@@ -33,9 +33,11 @@ ________________________________________________________________________________
 | **Tracking** | GET | /api/tracking/PERMIT-20260607-AZWLD | Melacak pengajuan berdasarkan nomer registrasi |
 
 ### **Testing & Dokumentasi API (Postman)**
-1.Auth
+1. Auth
 
 - [POST] /api/register (Pemohon)
+  
   <img width="960" height="564" alt="Api Register" src="https://github.com/user-attachments/assets/9300706a-09d8-4bae-a72e-e7e86c94f61c" />
 - [POST] /api/register (Admin)
+  
   <img width="960" height="564" alt="Api Register sebagai Admin" src="https://github.com/user-attachments/assets/467f4305-70bf-4acd-9b2a-7faa1765ac31" />
