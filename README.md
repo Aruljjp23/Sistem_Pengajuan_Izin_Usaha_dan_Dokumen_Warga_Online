@@ -33,7 +33,7 @@ ________________________________________________________________________________
 | **Tracking** | GET | /api/tracking/PERMIT-20260607-AZWLD | Melacak pengajuan berdasarkan nomer registrasi |
 
 ### **Testing & Dokumentasi API (Postman)**
-1. Auth
+### 1. Auth
 
     - [POST] /api/register (Pemohon)
   
