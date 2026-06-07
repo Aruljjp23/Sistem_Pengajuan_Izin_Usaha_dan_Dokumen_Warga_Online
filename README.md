@@ -35,15 +35,15 @@ ________________________________________________________________________________
 ### **Testing & Dokumentasi API (Postman)**
 ### 1. Auth
 
-    - [POST] /api/register (Pemohon)
+- [POST] /api/register (Pemohon)
   
   <img width="960" height="564" alt="Api Register" src="https://github.com/user-attachments/assets/9300706a-09d8-4bae-a72e-e7e86c94f61c" />
-    - [POST] /api/register (Admin)
+- [POST] /api/register (Admin)
   
   <img width="960" height="564" alt="Api Register sebagai Admin" src="https://github.com/user-attachments/assets/467f4305-70bf-4acd-9b2a-7faa1765ac31" />
  - [POST] /api/login (Pemohon)
 
    <img width="960" height="564" alt="Api Login" src="https://github.com/user-attachments/assets/8e9eb881-1eda-450c-95ba-78502165b782" />
-    - [POST] /api/login (Admin)
+- [POST] /api/login (Admin)
 
    <img width="960" height="564" alt="Api Login sebagai Admin" src="https://github.com/user-attachments/assets/dd02ef45-b650-4efe-9439-e6f421786b45" />
