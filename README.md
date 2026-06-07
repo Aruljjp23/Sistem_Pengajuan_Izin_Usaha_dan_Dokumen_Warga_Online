@@ -15,3 +15,4 @@ ________________________________________________________________________________
 ### **ERD Database & Relasi**
 | Modul | Method | Endpoint (Route) | Deskripsi & Akses |
 | :--- | :---: | :---: | ---: |
+| Auth | POST  | /api/register | Mendaftarkan user baru |
