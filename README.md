@@ -32,6 +32,7 @@ ________________________________________________________________________________
 |      | PUT | /api/pengajuan/1/submit | Update status pengajuan |
 | **Tracking** | GET | /api/tracking/PERMIT-20260607-AZWLD | Melacak pengajuan berdasarkan nomer registrasi |
 
+____________________________________________________________________________________________________________________________
 ### **Testing & Dokumentasi API (Postman)**
 ### 1. Auth
 
