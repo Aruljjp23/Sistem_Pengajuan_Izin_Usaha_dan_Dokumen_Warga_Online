@@ -125,3 +125,101 @@ ________________________________________________________________________________
 
 Ikuti langkah-langkah di bawah ini untuk menjalankan proyek PermitOnline - Sistem Pengajuan Izin Usaha & Dokumen Warga Online secara lokal di komputer Anda.
 
+## Persyaratan Sistem
+
+Pastikan perangkat telah terpasang:
+
+* PHP 8.1 atau lebih baru
+* Composer
+* MySQL/MariaDB
+* Git
+* Web Server (Laragon, XAMPP, atau sejenisnya)
+
+## Langkah Instalasi
+
+1. Clone repository dari GitHub.
+
+```bash
+git clone https://github.com/Aruljjp23/Sistem_Pengajuan_Izin_Usaha_dan_Dokumen_Warga_Online.git
+```
+
+2. Masuk ke direktori project.
+
+```bash
+cd Sistem_Pengajuan_Izin_Usaha_dan_Dokumen_Warga_Online
+```
+
+3. Install seluruh dependency Laravel menggunakan Composer.
+
+```bash
+composer install
+```
+
+4. Salin file environment.
+
+```bash
+cp .env.example .env
+```
+
+Atau pada Windows:
+
+```bash
+copy .env.example .env
+```
+
+5. Generate application key.
+
+```bash
+php artisan key:generate
+```
+
+6. Buat database baru di MySQL, misalnya:
+
+```sql
+CREATE DATABASE pengajuan_izin;
+```
+
+7. Sesuaikan konfigurasi database pada file `.env`.
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=pengajuan_izin
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+8. Jalankan migrasi database.
+
+```bash
+php artisan migrate
+```
+
+9. Buat symbolic link untuk penyimpanan dokumen.
+
+```bash
+php artisan storage:link
+```
+
+10. Jalankan aplikasi Laravel.
+
+```bash
+php artisan serve
+```
+
+11. Buka browser dan akses aplikasi melalui:
+
+```text
+http://127.0.0.1:8000
+```
+
+atau
+
+```text
+http://localhost:8000
+```
+
+## Login Sistem
+
+Masuk menggunakan akun yang telah tersedia pada database atau buat akun baru melalui fitur registrasi apabila disediakan oleh sistem.
