@@ -13,3 +13,5 @@ Berdasarkan Foreign Key (FK) yang dirancang pada database, berikut adalah relasi
 - Pengajuan ke Dokumen (One-to-Many) Satu pengajuan dapat memiliki banyak dokumen pendukung yang diunggah. Foreign key pengajuan_id berada pada tabel dokumen.
 ______________________________________________________________________________________________________________________________
 ### **ERD Database & Relasi**
+| Modul | Method | Endpoint (Route) | Deskripsi & Akses |
+| :--- | :---: | :---: | ---: |
