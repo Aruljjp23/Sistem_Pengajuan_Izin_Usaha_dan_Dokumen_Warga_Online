@@ -12,3 +12,4 @@ Berdasarkan Foreign Key (FK) yang dirancang pada database, berikut adalah relasi
 - Jenis Izin ke Pengajuan (One-to-Many) Satu jenis izin dapat digunakan dalam banyak pengajuan. Foreign key jenis_izin_id berada pada tabel pengajuan.
 - Pengajuan ke Dokumen (One-to-Many) Satu pengajuan dapat memiliki banyak dokumen pendukung yang diunggah. Foreign key pengajuan_id berada pada tabel dokumen.
 ______________________________________________________________________________________________________________________________
+### **ERD Database & Relasi**
