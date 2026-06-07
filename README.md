@@ -87,3 +87,19 @@ ________________________________________________________________________________
 
   <img width="960" height="564" alt="Api Pengajuan Melakukan Pencarian Berdasarkan Nomer Registrasi" src="https://github.com/user-attachments/assets/cb6bae57-c532-43a2-b413-3fdc82c7600d" />
 - [GET] /api/pengajuan/1/cetak-pdf (Melakukan cetak pdf surat izin pengajuan)
+
+<img width="960" height="564" alt="Api Cetak Pdf" src="https://github.com/user-attachments/assets/de8dff3e-debc-4452-87b2-a0e8c6e1c0fc" />
+- [PUT] /api/pengajuan/1/submit (Update status pengajuan)
+
+<img width="960" height="564" alt="Api Submit Pengajuan Status Draft" src="https://github.com/user-attachments/assets/6b1c6195-2093-40a8-87d3-c392c8d577fb" />
+
+### 5. Tracking
+
+- [PUT] /api/tracking/PERMIT-20260607-AZWLD (Melacak pengajuan berdasarkan nomer registrasi)
+
+  <img width="960" height="564" alt="Api Tracking" src="https://github.com/user-attachments/assets/d4488819-8ffb-4de3-be4c-4b2442d484b4" />
+
+___________________________________________________________________________________________________________________________
+### **Kendala & Solusi**
+
+- a
